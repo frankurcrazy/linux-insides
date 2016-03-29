@@ -1,4 +1,4 @@
-Thank you to all contributors:
+感謝所有的貢獻者：
 ------------------------------
 
 * [Akash Shende](https://github.com/akash0x53)
@@ -82,3 +82,4 @@ Thank you to all contributors:
 * [michaelian ennis](https://github.com/mennis)
 * [Amitay Stern](https://github.com/amist)
 * [Matt Todd](https://github.com/mtodd)
+* [Frank Chang](https://github.com/frankurcazy)
