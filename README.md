@@ -3,7 +3,7 @@ linux 核心原理
 
 一系列關於 linux 核心及內部運作機制的文章
 
-**目的很簡單** - 分享我對 linux 核心及其內部運作的微末知識, 幫助那些對 linux 核心內部以及底層相關主題有興趣的夥伴。
+**目標很簡單** - 分享我對 linux 核心及其內部運作的微末知識, 幫助那些對 linux 核心內部以及底層相關主題有興趣的夥伴。
 
 **問題與指教**: 有任何問題或指教，請不吝透過 twitter [@0xAX](https://twitter.com/0xAX) 與我聯絡， 也可以在 github 上開一個 [issue](https://github.com/0xAX/linux-insides/issues/new) 或者直接寄一封 [email](mailto:anotherworldofworld@gmail.com) 給我。
 
