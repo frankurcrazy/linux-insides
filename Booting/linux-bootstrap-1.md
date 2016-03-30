@@ -4,21 +4,21 @@
 從開機程式到核心
 --------------------------------------------------------------------------------
 
-如果您有讀過我之前的 [部落格文章](http://0xax.blogspot.com/search/label/asm)，就會發現我從前陣子開始與底層程式設計打交道。 我寫了一些關於 Linux x86_64 組合語言程式設計的文章。同時，我開始深入的研究 Linux 的原始碼。 我對於瞭解底層的東西是如何運作的這件事感到很有興趣，程式如何在我的電腦上執行、他們如何存在於記憶體當中、核心如何管理程序及記憶體、網路堆疊的底層如何運作等等。因此，我決定再寫一系列關於**x86_64**Linux核心的文章。
+如果您有讀過我之前的 [部落格文章](http://0xax.blogspot.com/search/label/asm)，就會發現我從前陣子開始與底層程式設計打交道。 我寫了一些關於 Linux x86_64 組合語言程式設計的文章。同時，我開始深入的研究 Linux 的原始碼。 我對於瞭解底層的東西是如何運作的這件事感到很有興趣，程式如何在我的電腦上執行、他們如何存在於記憶體當中、核心如何管理程序及記憶體、網路堆疊的底層如何運作等等。因此，我決定再寫一系列關於 **x86_64** Linux核心的文章。
 
-Note that I'm not a professional kernel hacker and I don't write code for the kernel at work. It's just a hobby. I just like low-level stuff, and it is interesting for me to see how these things work. So if you notice anything confusing, or if you have any questions/remarks, ping me on twitter [0xAX](https://twitter.com/0xAX), drop me an [email](anotherworldofworld@gmail.com) or just create an [issue](https://github.com/0xAX/linux-insides/issues/new). I appreciate it. All posts will also be accessible at [linux-insides](https://github.com/0xAX/linux-insides) and if you find something wrong with my English or the post content, feel free to send a pull request.
+請注意我並不是一個專業的核心駭客，我工作時也不用寫核心的程式碼，對我來說，這只是我的興趣。我只是喜歡底層的東西，我對於了解事物是如何運作感到興趣。所以如果您發現有任何內容讓您感到困惑，或者你有任何的疑問或意見，請在 twitter 上聯絡我 [0xAX](https://twitter.com/0xAX)，也可以直接寄一封 [email](anotherworldofworld@gmail.com) 給我，或者直接開一個 [issue](https://github.com/0xAX/linux-insides/issues/new)，謝謝您。所有的文章都能在 [linux-insides](https://github.com/0xAX/linux-insides) 上看到，如果你對我的英文或者文章內容有人和建議，歡迎直接送一個 pull request 給我。
 
 
-*Note that this isn't the official documentation, just learning and sharing knowledge.*
+*請注意這不是官方文件， 只是知識的學習與分享*
 
-**Required knowledge**
+**先備知識**
 
-* Understanding C code
-* Understanding assembly code (AT&T syntax)
+* 了解 C 語言
+* 了解組合語言 (AT&T 形式)
 
-Anyway, if you just start to learn some tools, I will try to explain some parts during this and the following posts. Ok, simple introduction finishes and now we can start to dive into the kernel and low-level stuff.
+總之，如果您才剛開始學習一些工具，我會在這篇以及接下來的幾篇文章中介紹一部分。好啦，簡單的介紹就到這裡，現在我們可以開始鑽研核心以及底層的東東囉。
 
-All code is actually for kernel - 3.18. If there are changes, I will update the posts accordingly.
+所有的程式碼都是基於 3.18 版的核心，如果未來有任何改變我將會更新相關的文章。
 
 The Magic Power Button, What happens next?
 --------------------------------------------------------------------------------
